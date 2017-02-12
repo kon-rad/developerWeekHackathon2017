@@ -1,0 +1,34 @@
+{
+  "name": "live-sports-360-vr",
+  "version": "1.0.0",
+  "description": "LIVE VR is an app that allow the clients to watch different sports in the POV of the players. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:konradgnat/developerWeekHackathon2017.git"
+  },
+  "keywords": [
+    "vr",
+    "live",
+    "sports",
+    "360"
+  ],
+  "author": "team hack",
+  "license": "MIT"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-header": "^1.8.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^1.11.3"
+  }
+}
