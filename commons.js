@@ -9,7 +9,7 @@ $(function() {
     resize_body();
     setTimeout(function() {
         poolFunc();
-    }, 3000);    
+    }, 3000);
  });
 
  function resize_body(){
@@ -42,21 +42,42 @@ function clickSmallCamp(){
 
  
  function write_player(team,num_player,vPos,oPos){
-     var canvasId='palyer_' + team + '_' + num_player;
+     var canvasId='player_' + team + '_' + num_player;
     $('#' + canvasId).remove();
     var canvas1 = $('<canvas/>', { id: canvasId, height: heightPlayer, width: widthPlayer});
-    if(selectedTeam==team && selectedPlayer==num_player)
+    var color_player='';
+    if(selectedTeam==team && selectedPlayer==num_player){
         canvas1.css('border', 'solid 2px black');
-    else
-        if(team == 'A') canvas1.css('border', 'solid 1px red' );
-        else canvas1.css('border', 'solid 1px blue' );
+        color_player='black';
+    }        
+    else{
+        if(team == 'A') color_player='red'; 
+        else color_player='blue';
+        canvas1.css('border', 'solid 1px ' +color_player );
+    }
     canvas1.css('position','absolute');
     canvas1.css('bottom','' +(((vPos-1)*heightPlayer)) +'px' );
     canvas1.css('right', '' +(((oPos-1)*widthPlayer)) +'px');
-    
     $('body').append(canvas1); 
+    var canvas = document.getElementById(canvasId);
+    var ctx = canvas.getContext("2d");
+    ctx.font = "100px Georgia";
+    ctx.fillText(num_player,widthPlayer,heightPlayer);    
+    if(team == 'A')
+    ctx.fillStyle = color_player;
+    $('#' + canvasId).data('team',team );
+    $('#' + canvasId).data('num_player',num_player );
     $("#" + canvasId).click(function(e){
-        alert('Have you select player ' + $(e.target));        
+        var idClicked = e.target.id;
+        var newPlayer=$('#' + idClicked);
+        var oldPlayer=$('#player_' + selectedTeam + '_' + selectedPlayer);
+        newPlayer.css('border', 'solid 2px black');
+        if(selectedTeam=='A')
+            oldPlayer.css('border', 'solid 1px red');
+        else
+            oldPlayer.css('border', 'solid 1px blue');
+        selectedTeam = newPlayer.data('team');
+        selectedPlayer = newPlayer.data('num_player');   
     })     
  }
 
