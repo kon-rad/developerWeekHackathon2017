@@ -30,7 +30,7 @@ function minimize_small_camp(){
     var canvas = document.getElementById('small_camp');
     canvas.height=$(document).height()/10;
     canvas.width=$(document).width()/10;   
-    expand=false; 
+    expand=false;
 }
 
 function maximize_small_camp(){
@@ -40,7 +40,7 @@ function maximize_small_camp(){
     expand=true; 
 }
 
-function clickSmallCamp(){    
+function clickSmallCamp(){
     if(!expand){
         maximize_small_camp();        
     }
@@ -50,7 +50,7 @@ function clickSmallCamp(){
     write_players();
 }
 
- 
+
  function write_player(team,num_player,vPos,oPos){
      var canvasId='player_' + team + '_' + num_player;
     $('#' + canvasId).remove();
@@ -69,6 +69,7 @@ function clickSmallCamp(){
     canvas1.css('bottom','' +(((vPos-1)*heightPlayer)) +'px' );
     canvas1.css('right', '' +(((oPos-1)*widthPlayer)) +'px');
     canvas1.css('z-index','3');    
+
     $('body').append(canvas1); 
     var canvas = document.getElementById(canvasId);
     var ctx = canvas.getContext("2d");
@@ -116,6 +117,7 @@ function clickSmallCamp(){
         script.src= '//player.cloud.wowza.com/hosted/jnvfzyx8/wowza.js';
         playercontainer.html(script);        */
     })     
+
  }
 
  function write_players(){
@@ -134,8 +136,8 @@ function clickSmallCamp(){
      }
      for(i=1;i<=vPlayers;i++){
          vPositions[i] = -1;
-     }     
-    for(i=1;i<=nPlayers;i++){        
+     }
+    for(i=1;i<=nPlayers;i++){
         var vPos = -1;
         var oPos = -1;
         while(true){
@@ -151,13 +153,13 @@ function clickSmallCamp(){
                 oPositions[oPos]=1;
                 break;
             }
-        }        
+        }
         write_player('A',i,vPos,oPos);
     }
      for(i=1;i<=vPlayers;i++){
          vPositions[i] = -1;
-     }    
-    for(i=1;i<=nPlayers;i++){        
+     }
+    for(i=1;i<=nPlayers;i++){
         var vPos = -1;
         var oPos = -1;
         while(true){
@@ -173,7 +175,7 @@ function clickSmallCamp(){
                 oPositions[oPos]=1;
                 break;
             }
-        }          
+        }
         write_player('B',i,vPos,oPos);
     }
  }
