@@ -49,6 +49,14 @@ a:focus {
   text-decoration: none;
   color: #1d9b6c;
 }
+.info-img {
+  width: auto;
+  height: 220px;
+}
+img.center {
+    display: block;
+    margin: 30px auto;
+}
 .light {
   font-weight: 400;
 }
@@ -124,7 +132,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background: url(../img/header002.jpeg) no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -224,7 +232,7 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background: url(../img/header001.jpeg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
