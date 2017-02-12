@@ -3,6 +3,12 @@ var selectedTeam = 'A';
 var heightPlayer=0;
 var widthPlayer=0
 var expand=false;
+var videoSel=1;
+
+
+function clearTimeout(t){
+
+}
 
 $(function() {
     minimize_small_camp();
@@ -13,29 +19,33 @@ $(function() {
  });
 
  function resize_body(){
+     $("#videoFrame").height=$(document).height();
+     $("#videoFrame").width=$(document).width();
+     if(expand)maximize_small_camp();
+     else minimize_small_camp();
     write_players();
  }
 
 function minimize_small_camp(){
     var canvas = document.getElementById('small_camp');
     canvas.height=$(document).height()/10;
-    canvas.width=$(document).width()/10;    
+    canvas.width=$(document).width()/10;   
+    expand=false; 
 }
 
 function maximize_small_camp(){
     var canvas = document.getElementById('small_camp');
     canvas.height=$(document).height();
-    canvas.width=$(document).width();    
+    canvas.width=$(document).width();   
+    expand=true; 
 }
 
 function clickSmallCamp(){    
     if(!expand){
-        maximize_small_camp();
-        expand=true;
+        maximize_small_camp();        
     }
     else{
-        minimize_small_camp();
-        expand=false;
+        minimize_small_camp();        
     }
     write_players();
 }
@@ -58,6 +68,7 @@ function clickSmallCamp(){
     canvas1.css('position','absolute');
     canvas1.css('bottom','' +(((vPos-1)*heightPlayer)) +'px' );
     canvas1.css('right', '' +(((oPos-1)*widthPlayer)) +'px');
+    canvas1.css('z-index','3');    
     $('body').append(canvas1); 
     var canvas = document.getElementById(canvasId);
     var ctx = canvas.getContext("2d");
@@ -78,6 +89,32 @@ function clickSmallCamp(){
             oldPlayer.css('border', 'solid 1px blue');
         selectedTeam = newPlayer.data('team');
         selectedPlayer = newPlayer.data('num_player');   
+        minimize_small_camp();
+        write_players();
+        if(videoSel==1){
+            $("#videoFrame").attr('src','video2.html');
+            videoSel=2;
+        }else{
+            $("#videoFrame").attr('src','video.html');
+            videoSel=1;
+        }
+
+        /*$('#wowza_player').remove();
+        $('#player_embed').remove();
+        var wowza_player = $('<div/>', { id: wowza_player});
+        
+        playercontainer.append(wowza_player);*/
+        //videojs.getPlayers().fcplayer.dispose();
+        /*$('#fcplayer_wrapper').remove();
+        
+        //$('#player_embed').remove();
+        var playercontainer= $('#playercontainer');
+        
+        playercontainer.append(wowza_player);   
+        var script= document.createElement('script');
+        script.type= 'text/javascript';
+        script.src= '//player.cloud.wowza.com/hosted/jnvfzyx8/wowza.js';
+        playercontainer.html(script);        */
     })     
  }
 
@@ -152,3 +189,10 @@ function poolFunc( ) {
         poolFunc();
     }, 3000);
 }
+
+$(document).ready(function(){
+    resize_body();
+    $(window).resize(function(){
+        resize_body();
+    });
+})
