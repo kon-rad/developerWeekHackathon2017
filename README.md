@@ -24,24 +24,24 @@ The image stabilization, helped with image processing, will help to have smoothe
 
 ###Architecture vision 
 A server that runs on top of  Wowza streaming engine: </br>
-receives 360 rtmp input from athletes’ cameras with authorization for game-and-athlete</br>
-transforms the input (for image stabilization) and pushes to Wowza streaming cloud </br>
-saves to database the m3u8 urls with game and athlete unique information</br>
+- receives 360 rtmp input from athletes’ cameras with authorization for game-and-athlete</br>
+- transforms the input (for image stabilization) and pushes to Wowza streaming cloud </br>
+- saves to database the m3u8 urls with game and athlete unique information</br>
 
 ###VR client application 
-asks our server for available live stream feeds </br>
-presents user with live stream game choices </br>
-displays to user their chosen game: uses a 360 player to play the m3u8 urls as user toggles back and forth between athlete</br>
+- asks our server for available live stream feeds </br>
+- presents user with live stream game choices </br>
+- displays to user their chosen game: uses a 360 player to play the m3u8 urls as user toggles back and forth between athlete</br>
 
 ###Optional additions
-save livestreams as VOD’s for similar VR athlete-toggling experience (sample use-case: learning opportunities for athletes) </br>
-integration of game analysis  in a voice-over and/or graphics (sample use-case: learning opportunities for athletes) </br>
-make content available for non-360 players and in regular web browsers for variety of clients </br>
-paygate for viewers </br>
-geoblocking, privacy, and other security features for stream viewing </br>
-social media and other forms of engagement for users</br>
-analytics on viewers </br>
-create a public (pay-for-use) api for independent content producers to stream 360 input for sports games, and create their own unique VR experience </br>
+- save livestreams as VOD’s for similar VR athlete-toggling experience (sample use-case: learning opportunities for athletes) </br>
+- integration of game analysis  in a voice-over and/or graphics (sample use-case: learning opportunities for athletes) </br>
+- make content available for non-360 players and in regular web browsers for variety of clients </br>
+- paygate for viewers </br>
+- geoblocking, privacy, and other security features for stream viewing </br>
+- social media and other forms of engagement for users</br>
+- analytics on viewers </br>
+- create a public (pay-for-use) api for independent content producers to stream 360 input for sports games, and create their own unique VR experience </br>
 
 ###Larger use-case
 Expand multi-camera 360 VR experience to other industries (not just sports)</br>
