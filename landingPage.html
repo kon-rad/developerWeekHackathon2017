@@ -56,7 +56,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#download">ENTER LIVE VR</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -92,60 +92,75 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Live sports 360º VR</h2>
-                <p>Each athlete has 5 cameras integrated their helmets creating a spherical image of reality which is streamed live.</p>
+                <div class="text-body">
+                    <p>Each athlete has 5 cameras integrated their helmets creating a spherical image of reality which is streamed live.</p>
 
-                <p>The users use a VR Headset, and can choose from which athlete’s perspective he/she wants to see the game. The user can change the athlete at any time, from the app and have several other options.</p>
+                    <p>The users use a VR Headset, and can choose from which athlete’s perspective he/she wants to see the game. The user can change the athlete at any time, from the app and have several other options.</p>
 
-                <p>The app also has an automatic POV function that changes the POV following different patterns, for example it can follow the athlete with the ball.
-                </p>
-
-                <img src="img/image003.jpeg" class="img-responsive center info-img">
-
-                <h3 class="heading_3">Helmet</h3>
-                <ul>
-                <li>5 built in cameras</li>
-                <li>gyroscope</li>
-                <li>Image stabilization</li>
-                <li>Accurate GPS/athlete tracking</li>
-                </ul>
-                <p>
-                The helmet app will take the input of all cameras and transform it in a spherical view of the reality.
-                The gyroscope will help in the vertical and horizontal positioning.
-                The image stabilization, helped with image processing, will help to have smoother view of actual footage.
-                </p>
-
-                <img src="img/image002.jpeg" class="img-responsive center info-img">
+                    <p>The app also has an automatic POV function that changes the POV following different patterns, for example it can follow the athlete with the ball.
+                    </p>
+                </div>
 
 
-                <h3 class="heading_3">Architecture Vision </h3>
 
-                <ul>
-                <li>A server that runs on top of  Wowza streaming engine:</li>
-                <li>
-                receives 360 rtmp input from athletes’ cameras with authorization for game-and-athlete
-                </li>
-                <li>
-                transforms the input (for image stabilization) and pushes to Wowza streaming cloud 
-                                </li>
-                <li>
-                saves to database the m3u8 urls with game and athlete unique information
-                </li>
-                </ul>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <img src="img/image003.jpeg" class="img-responsive center info-img">
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <img src="img/image004.png" class="img-responsive center info-img">
+                        </div>
 
-                <h3 class="heading_3">
-                VR client application 
-                </h3>
-                <ul>
-                  <li>
-                    asks our server for available live stream feeds 
-                  </li>
-                  <li>
-                    presents user with live stream game choices 
-                  </li>
-                  <li>
-                    displays to user their chosen game: uses a 360 player to play the m3u8 urls as user toggles back and forth between athlete
-                    </li>
-                </ul>
+                        <h2 class="heading_3">Helmet</h2>
+                            <div class="text-body">
+                                <ul>
+                                    <li>5 built in cameras</li>
+                                    <li>gyroscope</li>
+                                    <li>Image stabilization</li>
+                                    <li>Accurate GPS/athlete tracking</li>
+                                </ul>
+                                <p>
+                                    The helmet app will take the input of all cameras and transform it in a spherical view of the reality.
+                                    The gyroscope will help in the vertical and horizontal positioning.
+                                    The image stabilization, helped with image processing, will help to have smoother view of actual footage.
+                                </p>
+                            </div>
+                        </div>
+                    <img src="img/image002.jpeg" class="img-responsive center info-img">
+
+                <h2 class="heading_3">Architecture Vision </h2>
+                <div class="row">
+                    <div class="text-body">
+                        <ul>
+                            <li>A server that runs on top of  Wowza streaming engine:</li>
+                            <li>
+                            receives 360 rtmp input from athletes’ cameras with authorization for game-and-athlete
+                            </li>
+                            <li>
+                            transforms the input (for image stabilization) and pushes to Wowza streaming cloud 
+                                            </li>
+                            <li>
+                            saves to database the m3u8 urls with game and athlete unique information
+                            </li>
+                        </ul>
+                    </div>
+
+                <h2 class="heading_3">VR client application</h2>
+                    <div class="text-body">
+                        <ul>
+                          <li>
+                            asks our server for available live stream feeds 
+                          </li>
+                          <li>
+                            presents user with live stream game choices 
+                          </li>
+                          <li>
+                            displays to user their chosen game: uses a 360 player to play the m3u8 urls as user toggles back and forth between athlete
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
                 <!-- 
                 <h3>Optional additions: </h3>
                 <ul>
@@ -199,7 +214,7 @@ The first image is the field with all the athletes.  It can show the actual posi
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Live sports 360º VR</h2>
                 <p>Feel free to email us to provide some feedback on our Live VR, give us suggestions for new features to develop or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                <p><a href="mailto:feedback@startbootstrap.com">Contact@LiveSports360.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>

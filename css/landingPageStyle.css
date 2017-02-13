@@ -108,6 +108,10 @@ img.center {
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
+.text-body {
+  text-align: left;
+  font-size:20px;
+}
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 20px 0;
